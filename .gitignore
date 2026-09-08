@@ -1,4 +1,7 @@
 node_modules/
+assets/
+challengeGuide/
+design/
 package-lock.json
 package.json
 vite.config.ts
