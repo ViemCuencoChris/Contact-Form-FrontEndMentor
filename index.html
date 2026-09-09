@@ -8,46 +8,46 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="flex justify-center items-center min-h-screen bg-green-200 font-karla p-6">
-  <div class="flex flex-col bg-white rounded-2xl p-6">
-    <h1 class="text-2xl font-bold">Contact Us</h1>
+  <div class="flex flex-col gap-4 bg-white rounded-2xl p-6">
+    <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
 
-    <div class="flex flex-col">
-      <div>
-        <label class="text-gray-500" for="firstName">First Name</label>
-        <input id="firstName" type="text">
+    <div class="flex flex-col gap-1">
+      <label class="text-gray-900" for="firstName">First Name</label>
+      <input class="border border-solid border-gray-500 rounded-lg h-10" id="firstName" type="text">
+    </div>
+    <div class="flex flex-col gap-1">
+      <label class="text-gray-900" for="lastName">Last Name</label>
+      <input class="border border-solid border-gray-500 rounded-lg h-10" id="lastName" type="text">
+    </div>
+    
+    <div class="flex flex-col gap-1">
+      <label class="text-gray-900" for="email">Email Address</label>
+      <input class="border border-solid border-gray-500 rounded-lg h-10" id="email" type="text">
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <h2 class="text-gray-900">Query Type</h2>
+      <div class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10">
+        <input id="generalEnquiry" type="radio" name="query">
+        <label class="text-gray-900" for="generalEnquiry">General Enquiry</label>
       </div>
-      <div>
-        <label class="text-gray-500" for="lastName">Last Name</label>
-        <input id="lastName" type="text">
+      <div class="flex justify-start items-center gap-2 px-4 border border-solid border-gray-500 rounded-lg h-10">
+        <input id="supportRequest" type="radio" name="query">
+        <label class="text-gray-900" for="supportRequest">Support Request</label>
       </div>
     </div>
     
-    <label class="text-gray-500" for="email">Email Address</label>
-    <input id="email" type="text">
-    
-    <h2 class="text-gray-500">Query Type</h2>
-    <div class="flex flex-col">
-      <div>
-        <label class="text-gray-500" for="generalEnquiry">General Enquiry</label>
-        <input id="generalEnquiry" type="text">
-      </div>
-      <div>
-        <label class="text-gray-500" for="supportRequest">Support Request</label>
-        <input id="supportRequest" type="text">
-      </div>
-    </div>
-    
-    <div>
-      <label class="text-gray-500" for="message">Message</label>
-      <input id="message" type="text">
+    <div class="flex flex-col gap-1">
+      <label class="text-gray-900" for="message">Message</label>
+      <input class="border border-solid border-gray-500 rounded-lg h-52" id="message" type="text">
     </div>
 
-    <div>
+    <div class="flex gap-4 my-4">
       <input class="" id="consent" type="radio">
-      <label class="text-gray-500" id="consent" for="">I consent to being contacted by the team</label>
+      <label class="text-gray-900" id="consent" for="">I consent to being contacted by the team</label>
     </div>
 
-    <button>Submit</button>
+    <button class="bg-green-600 text-lg text-white font-bold p-4 rounded-xl" id="submit">Submit</button>
   </div>
 
   <script type="module" src="src/main.js"></script>

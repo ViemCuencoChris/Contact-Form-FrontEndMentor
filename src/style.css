@@ -3,4 +3,7 @@
 
 @theme {
   --font-karla: "Karla", sans-serif; 
+  --color-gray-500: hsl(186, 15%, 59%);
+  --color-gray-900: hsl(187, 24%, 22%);
+  --color-green-600: hsl(169, 82%, 27%);
 }
