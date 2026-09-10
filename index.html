@@ -13,37 +13,37 @@
 
     <div class="flex flex-col gap-1">
       <label class="text-gray-900" for="firstName">First Name</label>
-      <input class="outline-none border border-solid border-gray-500 rounded-lg h-10 p-2" id="firstName" type="text">
+      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="firstName" type="text">
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-gray-900" for="lastName">Last Name</label>
-      <input class="outline-none border border-solid border-gray-500 rounded-lg h-10 p-2" id="lastName" type="text">
+      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="lastName" type="text">
     </div>
     
     <div class="flex flex-col gap-1">
       <label class="text-gray-900" for="email">Email Address</label>
-      <input class="outline-none border border-solid border-gray-500 rounded-lg h-10 p-2" id="email" type="text">
+      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="email" type="text">
     </div>
     
     <div class="flex flex-col gap-2">
       <h2 class="text-gray-900 mb-1">Query Type</h2>
-      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900" for="generalEnquiry">
-        <input id="generalEnquiry" type="radio" name="query">
+      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900 has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200" for="generalEnquiry">
+        <input class="accent-green-600 text-gray-900" id="generalEnquiry" type="radio" name="query">
         General Enquiry
       </label>
-      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900" for="supportRequest">
-        <input id="supportRequest" type="radio" name="query">
+      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900 has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200" for="supportRequest">
+        <input class="accent-green-600 text-gray-900" id="supportRequest" type="radio" name="query">
         Support Request
       </label>
     </div>
     
     <div class="flex flex-col gap-1">
       <label class="text-gray-900" for="message">Message</label>
-      <textarea class="outline-none border border-solid border-gray-500 rounded-lg h-52 p-2" id="message" type="text"></textarea>
+      <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600" id="message" type="text"></textarea>
     </div>
 
-    <label class="flex gap-4 justify-start items-center my-4 px-2 text-gray-900" id="consent" for="consent">
-      <input class="appearance-none w-5 h-4 border border-solid border-gray-500 checked:bg-[url('assets/images/icon-checkbox-check.svg')] checked:bg-center checked:bg-no-repeat checked:bg-cover checked:border-transparent" id="consent" type="checkbox">
+    <label class="flex gap-4 justify-start items-center my-4 px-2 text-gray-900" for="consent">
+      <input class="border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2]" id="consent" type="checkbox">
       I consent to being contacted by the team
     </label>
 
