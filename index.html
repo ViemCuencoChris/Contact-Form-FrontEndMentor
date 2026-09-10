@@ -8,47 +8,53 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="flex justify-center items-center min-h-screen bg-green-200 font-karla p-6">
-  <div class="flex flex-col gap-4 bg-white rounded-2xl p-6">
-    <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
-
-    <div class="flex flex-col gap-1">
-      <label class="text-gray-900" for="firstName">First Name</label>
-      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="firstName" type="text">
+  <form class="flex flex-col gap-4 bg-white rounded-2xl p-6 w-full max-w-180">
+    <div class="flex justify-left w-full">
+      <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
     </div>
-    <div class="flex flex-col gap-1">
-      <label class="text-gray-900" for="lastName">Last Name</label>
-      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="lastName" type="text">
+
+    <div class="flex flex-col w-full md:flex-row md:gap-4">
+      <div class="flex flex-col gap-1 w-full">
+        <label class="text-gray-900 xl:text-lg" for="firstName">First Name</label>
+        <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="firstName" type="text">
+      </div>
+      <div class="flex flex-col gap-1 w-full">
+        <label class="text-gray-900 xl:text-lg" for="lastName">Last Name</label>
+        <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="lastName" type="text">
+      </div>
     </div>
     
-    <div class="flex flex-col gap-1">
-      <label class="text-gray-900" for="email">Email Address</label>
+    <div class="flex flex-col gap-1 w-full">
+      <label class="text-gray-900 xl:text-lg" for="email">Email Address</label>
       <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="email" type="text">
     </div>
     
-    <div class="flex flex-col gap-2">
-      <h2 class="text-gray-900 mb-1">Query Type</h2>
-      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900 has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200" for="generalEnquiry">
-        <input class="accent-green-600 text-gray-900" id="generalEnquiry" type="radio" name="query">
-        General Enquiry
-      </label>
-      <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg h-10 text-gray-900 has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200" for="supportRequest">
-        <input class="accent-green-600 text-gray-900" id="supportRequest" type="radio" name="query">
-        Support Request
-      </label>
+    <div class="flex flex-col gap-3 w-full">
+      <h2 class="text-gray-900 xl:text-lg">Query Type</h2>
+      <div class="flex flex-col gap-2 md:flex-row md:gap-4">
+        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer" for="generalEnquiry">
+          <input class="accent-green-600 text-gray-900" id="generalEnquiry" type="radio" name="query">
+          General Enquiry
+        </label>
+        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer" for="supportRequest">
+          <input class="accent-green-600 text-gray-900" id="supportRequest" type="radio" name="query">
+          Support Request
+        </label>
+      </div>
     </div>
     
-    <div class="flex flex-col gap-1">
-      <label class="text-gray-900" for="message">Message</label>
-      <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600" id="message" type="text"></textarea>
+    <div class="flex flex-col gap-1 w-full">
+      <label class="text-gray-900 xl:text-lg" for="message">Message</label>
+      <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600 md:h-32" id="message" type="text"></textarea>
     </div>
 
-    <label class="flex gap-4 justify-start items-center my-4 px-2 text-gray-900" for="consent">
-      <input class="border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2]" id="consent" type="checkbox">
+    <label class="flex gap-4 justify-start items-center my-4 px-2 text-gray-900 xl:text-lg w-full" for="consent">
+      <input class="border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2] cursor-pointer" id="consent" type="checkbox">
       I consent to being contacted by the team
     </label>
 
-    <button class="bg-green-600 text-lg text-white font-bold p-4 rounded-xl" id="submit">Submit</button>
-  </div>
+    <button class="bg-green-600 text-lg text-white xl:text-lg font-bold p-4 rounded-xl hover:bg-green-900 cursor-pointer w-full" id="submit">Submit</button>
+  </form>
 
   <script type="module" src="src/main.js"></script>
 </body>
