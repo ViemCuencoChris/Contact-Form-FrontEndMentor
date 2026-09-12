@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="flex justify-center items-center min-h-screen bg-green-200 font-karla p-6">
+  <div class="absolute self-start w-full max-w-60 xl:max-w-100 bg-success rounded-lg p-5 opacity-0 transition-opacity duration-[1.0s] ease-out" id="messageSent">
+    <p class="text-white mb-2 text-base"><img class="inline w-5 h-auto mr-1" src="/assets/images/icon-success-check.svg">Message Sent!</p>
+    <p class="text-white text-sm">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
   <form class="flex flex-col gap-4 bg-white rounded-2xl p-6 w-full max-w-180" id="form">
     <div class="flex justify-left w-full">
       <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
@@ -66,8 +71,3 @@
   <script type="module" src="src/main.js"></script>
 </body>
 </html>
-
-<!--
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
--->

@@ -9,10 +9,14 @@ const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 
+const msgSent = document.getElementById("messageSent");
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const fields = [firstName, lastName, email, message];
+
+    let filledForm = true;
 
     fields.forEach((inputFields, index) => {
         if(inputFields.value === ""){
@@ -26,7 +30,7 @@ form.addEventListener("submit", (event) => {
             setTimeout(() => {
                 inputFields.style.borderColor = "";
             }, 1000);
-
+            filledForm = false;
         }
     });
 
@@ -40,6 +44,15 @@ form.addEventListener("submit", (event) => {
             setTimeout(() => {
                 errorMsgB[index].classList.add("hidden");
             }, 1000);
+            filledForm = false;
         }
     });
+
+    if(filledForm === true){
+        msgSent.style.opacity = '1';
+
+        setTimeout(() => {
+            msgSent.style.opacity = '';
+        }, 2000);
+    }
 });
