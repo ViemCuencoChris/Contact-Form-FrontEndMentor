@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="flex justify-center items-center min-h-screen bg-green-200 font-karla p-6">
-  <form class="flex flex-col gap-4 bg-white rounded-2xl p-6 w-full max-w-180">
+  <form class="flex flex-col gap-4 bg-white rounded-2xl p-6 w-full max-w-180" id="form">
     <div class="flex justify-left w-full">
       <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
     </div>
@@ -17,43 +17,50 @@
       <div class="flex flex-col gap-1 w-full">
         <label class="text-gray-900 xl:text-lg" for="firstName">First Name</label>
         <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="firstName" type="text">
+        <p class="error hidden text-red-300">This field is required</p>
       </div>
       <div class="flex flex-col gap-1 w-full">
         <label class="text-gray-900 xl:text-lg" for="lastName">Last Name</label>
         <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="lastName" type="text">
+        <p class="error hidden text-red-300">This field is required</p>
       </div>
     </div>
     
     <div class="flex flex-col gap-1 w-full">
-      <label class="text-gray-900 xl:text-lg" for="email">Email Address</label>
-      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="email" type="text">
+      <label class="text-gray-900 xl:text-lg" id="" for="email">Email Address</label>
+      <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="email" type="email">
+      <p class="error hidden text-red-300">Please enter a valid email address</p>
     </div>
     
-    <div class="flex flex-col gap-3 w-full">
-      <h2 class="text-gray-900 xl:text-lg">Query Type</h2>
+    <div class="flex flex-col w-full">
+      <h2 class="text-gray-900 mb-3 xl:text-lg">Query Type</h2>
       <div class="flex flex-col gap-2 md:flex-row md:gap-4">
-        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer" for="generalEnquiry">
-          <input class="accent-green-600 text-gray-900" id="generalEnquiry" type="radio" name="query">
+        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer">
+          <input class="accent-green-600 text-gray-900" type="radio" name="query" value="generalEnquiry">
           General Enquiry
         </label>
-        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer" for="supportRequest">
-          <input class="accent-green-600 text-gray-900" id="supportRequest" type="radio" name="query">
+        <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer">
+          <input class="accent-green-600 text-gray-900" type="radio" name="query" value="supportRequest">
           Support Request
         </label>
       </div>
+      <p class="error hidden text-red-300">Please select a query type</p>
     </div>
     
     <div class="flex flex-col gap-1 w-full">
       <label class="text-gray-900 xl:text-lg" for="message">Message</label>
       <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600 md:h-32" id="message" type="text"></textarea>
+      <p class="error hidden text-red-300">This field is required</p>
     </div>
 
-    <label class="flex gap-4 justify-start items-center my-4 px-2 text-gray-900 xl:text-lg w-full" for="consent">
-      <input class="border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2] cursor-pointer" id="consent" type="checkbox">
-      I consent to being contacted by the team
-    </label>
+    <div class="flex flex-col justify-center  my-4 px-2">
+        <label class="text-gray-900 xl:text-lg w-full">
+          <input class="mr-3 border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2] cursor-pointer" name="consent" type="checkbox" value="agree">
+          I consent to being contacted by the team</label>
+      <p class="error hidden text-red-300">To submit this form, please consent to being contacted</p>
+    </div>
 
-    <button class="bg-green-600 text-lg text-white xl:text-lg font-bold p-4 rounded-xl hover:bg-green-900 cursor-pointer w-full" id="submit">Submit</button>
+    <button class="bg-green-600 text-lg text-white xl:text-lg font-bold p-4 rounded-xl hover:bg-green-900 cursor-pointer w-full">Submit</button>
   </form>
 
   <script type="module" src="src/main.js"></script>
@@ -61,31 +68,6 @@
 </html>
 
 <!--
-Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
   Message Sent!
   Thanks for completing the form. We'll be in touch soon!
 -->
