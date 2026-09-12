@@ -15,25 +15,25 @@
 
     <div class="flex flex-col w-full md:flex-row md:gap-4">
       <div class="flex flex-col gap-1 w-full">
-        <label class="text-gray-900 xl:text-lg" for="firstName">First Name</label>
+        <label class="text-gray-900 xl:text-lg after:ml-2 after:text-green-600 after:content-['*']" for="firstName">First Name</label>
         <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="firstName" name="firstName" type="text">
         <p class="error hidden text-red-300">This field is required</p>
       </div>
       <div class="flex flex-col gap-1 w-full">
-        <label class="text-gray-900 xl:text-lg" for="lastName">Last Name</label>
+        <label class="text-gray-900 xl:text-lg after:ml-2 after:text-green-600 after:content-['*']" for="lastName">Last Name</label>
         <input class="text-gray-900 w-full outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="lastName" name="lastName" type="text">
         <p class="error hidden text-red-300">This field is required</p>
       </div>
     </div>
     
     <div class="flex flex-col gap-1 w-full">
-      <label class="text-gray-900 xl:text-lg" id="" for="email">Email Address</label>
+      <label class="text-gray-900 xl:text-lg after:ml-2 after:text-green-600 after:content-['*']" id="" for="email">Email Address</label>
       <input class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-10 p-2 focus:border-green-600 hover:border-green-600" id="email" name="email" type="email">
       <p class="error hidden text-red-300">Please enter a valid email address</p>
     </div>
     
     <div class="flex flex-col w-full">
-      <h2 class="text-gray-900 mb-3 xl:text-lg">Query Type</h2>
+      <h2 class="text-gray-900 mb-3 xl:text-lg after:ml-2 after:text-green-600 after:content-['*']">Query Type</h2>
       <div class="flex flex-col gap-2 md:flex-row md:gap-4">
         <label class="flex justify-start items-center gap-2 px-4 mb-2 border border-solid border-gray-500 rounded-lg w-full h-10 text-gray-900 xl:text-lg has-checked:border-green-600 hover:border-green-600 has-checked:bg-green-200 hover:bg-green-200 cursor-pointer">
           <input class="accent-green-600 text-gray-900" type="radio" name="query" value="generalEnquiry">
@@ -48,19 +48,19 @@
     </div>
     
     <div class="flex flex-col gap-1 w-full">
-      <label class="text-gray-900 xl:text-lg" for="message">Message</label>
-      <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600 md:h-32" id="message" name="message" type="text"></textarea>
+      <label class="text-gray-900 xl:text-lg after:ml-2 after:text-green-600 after:content-['*']" for="message">Message</label>
+      <textarea class="text-gray-900 outline-none border border-solid border-gray-500 rounded-lg h-52 p-2 focus:border-green-600 hover:border-green-600 md:h-32" id="message" name="message"></textarea>
       <p class="error hidden text-red-300">This field is required</p>
     </div>
 
     <div class="flex flex-col justify-center  my-4 px-2">
-        <label class="text-gray-900 xl:text-lg w-full">
+        <label class="text-gray-900 xl:text-lg w-full after:ml-2 after:text-green-600 after:content-['*']">
           <input class="mr-3 border border-solid border-gray-500 rounded-xs accent-green-600 scale-[1.2] cursor-pointer" name="consent" type="checkbox" value="agree">
           I consent to being contacted by the team</label>
       <p class="errorB hidden text-red-300">To submit this form, please consent to being contacted</p>
     </div>
 
-    <button class="bg-green-600 text-lg text-white xl:text-lg font-bold p-4 rounded-xl hover:bg-green-900 cursor-pointer w-full">Submit</button>
+    <button class="bg-green-600 text-lg text-white xl:text-lg font-bold p-4 rounded-xl hover:bg-green-900 cursor-pointer w-full" type="submit">Submit</button>
   </form>
 
   <script type="module" src="src/main.js"></script>
